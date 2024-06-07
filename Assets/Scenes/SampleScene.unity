@@ -833,6 +833,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 744944563}
     - target: {fileID: 146321977, guid: 523bb40ab72e8df478be863fc631622e, type: 3}
+      propertyPath: _groundDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 146321977, guid: 523bb40ab72e8df478be863fc631622e, type: 3}
       propertyPath: _stepHeight
       value: 0.5
       objectReference: {fileID: 0}
@@ -856,6 +860,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 389945256236552243, guid: 523bb40ab72e8df478be863fc631622e,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 389945256236552243, guid: 523bb40ab72e8df478be863fc631622e,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1782089457138434609, guid: 523bb40ab72e8df478be863fc631622e,
         type: 3}
@@ -1690,7 +1704,6 @@ GameObject:
   - component: {fileID: 744944567}
   - component: {fileID: 744944566}
   - component: {fileID: 744944565}
-  - component: {fileID: 744944564}
   - component: {fileID: 744944570}
   - component: {fileID: 744944569}
   m_Layer: 0
@@ -1700,18 +1713,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &744944564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744944563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be3ba1e0656bd348bbdc1ab9dd6f0ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &744944565
 CapsuleCollider:
   m_ObjectHideFlags: 0
