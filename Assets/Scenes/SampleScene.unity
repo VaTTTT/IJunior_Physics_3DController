@@ -1001,6 +1001,11 @@ PrefabInstance:
       propertyPath: _botRadius
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2075902530107220962, guid: 523bb40ab72e8df478be863fc631622e,
+        type: 3}
+      propertyPath: _stepHeight
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8444424503582617911, guid: 523bb40ab72e8df478be863fc631622e,
         type: 3}
       propertyPath: _target

@@ -42,10 +42,12 @@ public class CollisionDetector : MonoBehaviour
         float lowerRayLength = 0.1f;
         float upperRayLength = 0.2f;
         float lowerRayCorrectedLength = lowerRayLength + _botRadius - _lowerStepPoint.localPosition.z;
+        //Debug.DrawRay(_lowerStepPoint.position, _lowerStepPoint.forward, Color.blue);
+        //Debug.DrawRay(_upperStepPoint.position, _upperStepPoint.forward, Color.blue);
 
-        if (Physics.Raycast(_lowerStepPoint.position, _transform.TransformDirection(Vector3.forward), out _, lowerRayCorrectedLength, _groundLayer))
+        if (Physics.Raycast(_lowerStepPoint.position, _lowerStepPoint.forward, out _, lowerRayCorrectedLength, _groundLayer))
         {
-            if (!Physics.Raycast(_upperStepPoint.position, _transform.TransformDirection(Vector3.forward), out _, upperRayLength, _groundLayer))
+            if (!Physics.Raycast(_upperStepPoint.position, _upperStepPoint.forward, out _, upperRayLength, _groundLayer))
             {
                 return true;
             }

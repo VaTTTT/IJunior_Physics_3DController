@@ -23,13 +23,12 @@ public class Chaser : MonoBehaviour
         _collisionDetector = GetComponent<CollisionDetector>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         _targetDistance = Vector3.Distance(_transform.position, _target.position);
 
         if (_target != null)
         {
-            _collisionDetector.CheckGround();
             _rotator.RotateTowardsTarget(_target);
 
             if (_chaseDistance < _targetDistance)

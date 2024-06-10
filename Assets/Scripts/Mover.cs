@@ -15,7 +15,7 @@ public class Mover : MonoBehaviour
     private Vector3 _verticalVelocity;
     private float _planeVelocityMultiplier = 10f;
     private float _slopeVelocityMultiplier = 5f;
-    private float _stairsVelocityMultiplier = 18f;
+    private float _stairsVelocityMultiplier = 20f;
     private Vector3 _targetDirection;
 
     private void Awake()
@@ -29,6 +29,8 @@ public class Mover : MonoBehaviour
 
     private void FixedUpdate()
     {
+        _collisionDetector.CheckGround();
+
         if (_collisionDetector.IsOnGround)
         {
             _rigidBody.drag = _groundDrag;
