@@ -13,7 +13,6 @@ public class CollisionDetector : MonoBehaviour
     [SerializeField] private float _stepHeight = 0.3f;
 
     private Collider _collider;
-    private Transform _transform;
 
     private bool _isOnGround = false;
     private bool _isOnSlope = false;
@@ -31,7 +30,6 @@ public class CollisionDetector : MonoBehaviour
 
     private void Awake()
     {
-        _transform = GetComponent<Transform>();
         _collider = GetComponent<Collider>();
 
         _upperStepPoint.position = new Vector3(_upperStepPoint.position.x, _lowerStepPoint.position.y + _stepHeight, _upperStepPoint.position.z);
@@ -42,8 +40,6 @@ public class CollisionDetector : MonoBehaviour
         float lowerRayLength = 0.1f;
         float upperRayLength = 0.2f;
         float lowerRayCorrectedLength = lowerRayLength + _botRadius - _lowerStepPoint.localPosition.z;
-        //Debug.DrawRay(_lowerStepPoint.position, _lowerStepPoint.forward, Color.blue);
-        //Debug.DrawRay(_upperStepPoint.position, _upperStepPoint.forward, Color.blue);
 
         if (Physics.Raycast(_lowerStepPoint.position, _lowerStepPoint.forward, out _, lowerRayCorrectedLength, _groundLayer))
         {
