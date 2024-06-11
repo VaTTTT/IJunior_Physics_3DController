@@ -43,14 +43,7 @@ public class CollisionDetector : MonoBehaviour
 
         if (Physics.Raycast(_lowerStepPoint.position, _lowerStepPoint.forward, out _, lowerRayCorrectedLength, _groundLayer))
         {
-            if (!Physics.Raycast(_upperStepPoint.position, _upperStepPoint.forward, out _, upperRayLength, _groundLayer))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return Physics.Raycast(_upperStepPoint.position, _upperStepPoint.forward, out _, upperRayLength, _groundLayer) == false;
         }
         else
         {
